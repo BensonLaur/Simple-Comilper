@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1461736066 source:g:\桌面\专业软件\codeblocks projects\syntaxanalyzer\main.cpp
+	<stdio.h>
+	<string.h>
+	"AnalyzerDefinations.h"
+
+1461736147 g:\桌面\专业软件\codeblocks projects\syntaxanalyzer\analyzerdefinations.h
+	"LexicalAnalyzerPart.h"
+	"SyntaxAnalyzerPart.h"
+
+1461658767 g:\桌面\专业软件\codeblocks projects\syntaxanalyzer\analyzerdefinations.cpp
+	"AnalyzerDefinations.h"
+
+1461735640 source:g:\桌面\专业软件\codeblocks projects\syntaxanalyzer\lexicalanalyzerpart.cpp
+	<stdio.h>
+	<string.h>
+	"AnalyzerDefinations.h"
+
+1461736066 g:\桌面\专业软件\codeblocks projects\syntaxanalyzer\lexicalanalyzerpart.h
+
+1461736066 g:\桌面\专业软件\codeblocks projects\syntaxanalyzer\syntaxanalyzerpart.h
+
