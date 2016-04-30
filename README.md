@@ -1,4 +1,7 @@
 ﻿#Simple Compiler
+###requirement:
+   this project is run with Codeblock 10.05 
+   
 ###first commit:finish the lexcical Analysis design
 by 2016/4/30 12:59
 
