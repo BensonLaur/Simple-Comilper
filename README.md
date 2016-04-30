@@ -6,17 +6,17 @@ by 2016/4/30 12:59
 by 2016/4/30 13:12
 
 /*********************************************************
-*
-*   file: README
-*   description: describes the design of compiler,including
-*                Lexical,Syntax,Semantic anlysis design.
-*
-*   note:the design is not completed yet!
-*        progress:
-*           Lexical analysis   [check]
-*           Syntax  analysis   [check]
-*           semantic analysis  [uncheck]
-*
+
+   file: README
+   description: describes the design of compiler,including
+                Lexical,Syntax,Semantic anlysis design.
+
+   note:the design is not completed yet!
+        progress:
+           Lexical analysis   [check]
+           Syntax  analysis   [check]
+           semantic analysis  [uncheck]
+
 
 **********************************************************/
 
