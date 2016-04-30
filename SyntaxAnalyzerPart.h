@@ -2,30 +2,40 @@
 #define SYNTAX_ANALYZER_PART_H_INCLUDED
 
 /*********** 语法分析函数 ********************/
+//<程序>
+void Program();
 
+//<语句串>
+void StatementString();
 
-/****** 语法分析阶段 *****************
+//<普通语句>
+void NormalStatement();
 
-待分析的简单语言的语法
-示意如下：
+//<特定结构语句>
+void SpecialStatement();
 
-（1）<程序> ::= int main '{' <语句串> '}'
-（2）<语句串> ::= ( <普通语句> ';' ) | (<特定结构语句>) { ( <普通语句> ';' ) | (<特定结构语句>) }
-（3）<普通语句> ::= (static <变量声明>) | <变量声明> | <赋值语句>
-（4）<特定结构语句> ::= for '(' <赋值语句> ';' <判断语句> ';' <赋值语句> ')' '{' <loop语句串> '}'
-                       |while '(' <判断语句> ')' '{' <loop语句串> '}     '
-                       |if '(' <判断语句> ')' '{'<语句串>'}' <else 语句>
-（5）<else 语句> ::= ( else '{' <语句串> '}' ) | <空>
-（6）<loop语句串> ::= <语句串> | ( break ';') | (continue ';') {<语句串> | ( break ';') | (continue ';')}
-（7）<判断语句> ::= <表达式> <判断符号> <表达式>
-（8）<判断符号> ::= "==" | ">=" | "<=" |">" |"<" |"!="
-（9）<变量声明> ::= <基本类型> <ID>
-（10）<赋值语句> ::= <ID> = <表达式>
-（11）<表达式> ::= <项> { '+' <项> | '-' <项> }
-（12）<项> ::= <因子> { '*' <因子> | '/' <因子> }
-（13）<因子> ::= <ID> | <NUM> | ( <表达式> )
+//<变量声明>
+void VariableDeclaration();
 
-*/
+//<赋值语句>
+void ValueAssignment();
 
+//<判断语句>
+void Judgement();
+
+//<loop语句串>
+void LoopStatement();
+
+//<else 语句>
+void ElseStatement();
+
+//<表达式>
+void Expression();
+
+//<项>
+void Iterm();
+
+//<因子>
+void Factor();
 
 #endif // SYNTAX_ANALYZER_PART_H_INCLUDED

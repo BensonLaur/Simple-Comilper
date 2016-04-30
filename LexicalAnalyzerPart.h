@@ -1,7 +1,6 @@
 #ifndef LEXICAL_ANALYZER_PART_H_INCLUDED
 #define LEXICAL_ANALYZER_PART_H_INCLUDED
 
-
 /*********** 词法分析函数 ********************/
 /* 每次读取一个token */
 WORD* scaner();

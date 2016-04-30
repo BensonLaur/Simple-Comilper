@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="AnalyzerDefinations.h" open="1" top="0" tabpos="2">
-		<Cursor position="326" topLine="0" />
+	<File name="AnalyzerDefinations.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="LexicalAnalyzerPart.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="1091" topLine="20" />
+	<File name="AnalyzerDefinations.h" open="1" top="0" tabpos="7">
+		<Cursor position="406" topLine="0" />
 	</File>
-	<File name="LexicalAnalyzerPart.h" open="1" top="0" tabpos="4">
-		<Cursor position="86" topLine="0" />
+	<File name="LexicalAnalyzerPart.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="101" topLine="0" />
 	</File>
-	<File name="SyntaxAnalyzerPart.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="36" topLine="0" />
+	<File name="LexicalAnalyzerPart.h" open="1" top="0" tabpos="6">
+		<Cursor position="244" topLine="17" />
 	</File>
-	<File name="SyntaxAnalyzerPart.h" open="1" top="0" tabpos="3">
-		<Cursor position="139" topLine="0" />
+	<File name="README" open="1" top="0" tabpos="8">
+		<Cursor position="452" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="1520" topLine="37" />
+	<File name="SyntaxAnalyzerPart.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="230" topLine="0" />
+	</File>
+	<File name="SyntaxAnalyzerPart.h" open="1" top="1" tabpos="5">
+		<Cursor position="438" topLine="15" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1449" topLine="33" />
 	</File>
 </CodeBlocks_layout_file>
