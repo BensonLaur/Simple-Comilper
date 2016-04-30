@@ -1,19 +1,24 @@
-/***
-    结合上一阶段词法分析的设计（project LexicalAnalyzer），在其基础上
-    进行递归下降子函数法的语法分析的设计
-*/
-#include <stdio.h>
-#include <string.h>
+/*********************************************************
+*
+*   file:main.cpp
+*   description:entry of program
+*
+*   结合上一阶段词法分析的设计（project LexicalAnalyzer），在其基础上
+*   进行递归下降子函数法的语法分析的设计
+*
+**********************************************************/
 #include "AnalyzerDefinations.h"
 
 int p_input;             //输入单词的缓冲区指针
 char input[1024];        //输入单词的缓冲区
 int currentLine=1;       //记录当前读取token所在的行号
+int Syn=1;               //暂存种别码
+int cError =0;           //语法错误个数
+WORD* oneword = new WORD;//暂存token
 
 int main()
 {
-    int over=1;
-    WORD* oneword = new WORD;
+    memset(input,0,sizeof(char)*1024);//保证将输入缓冲区所有位置置为'\0'
     printf("Enter Your words(end with #):\n");
     scanf("%[^#]s",input);     //从控制台读入源代码，以#结束，可以多行输入
     strcat(input,"\n");
@@ -33,30 +38,30 @@ int main()
     }
     printf("\n");
 
-    //词法分析与语法分析
-    int countOfToken=0;
-    while(over<1000 ) //over<1000 时为有效种别码
-    {
-        oneword = scaner();                     //读取一个token
-        //if(countOfToken++%4==0)printf("\n");    //每行输出4对二元组
-        //if(oneword->typenum < 1000 && oneword->typenum>0)             //为有效种别码时输出二元组
-        //    printf("(%2d,%8s)\t",oneword->typenum,oneword->word);
-        over = oneword->typenum;
-
-        if(over==-1)        //over=-1时为种别码识别错误时的值
-        {
-            printf("\nLine [%3d] error:无法识别 %s\n",currentLine,oneword->word);
-            countOfToken==0;
-        }else if(over ==-2) //over=-2时为由一个'/'导致的注释错误
-        {
-            printf("\nLine [%3d] error:存在多余符号'/' 或者 由仅有的一个'/'导致的错误注释 \n",
-                   currentLine-1,oneword->word);
-            countOfToken==0;
-        }
-    }
-    if(over==1001)printf("\nLine [%3d] error:注释没有结尾\n",currentLine);
+    //进入词法语法分析
+    Program();
 
     printf("\npress # to exit:");
     scanf("%[^#]s",input);
 }
 
+/** 测试用例 *************
+int main()
+{
+    int a;  int b;  int i;          //声明时不能同时赋值
+    a=0;    b=0;
+    for( i=0 ; i<100 ; i=i+1)       //for循环，可嵌套
+    {
+        if( i<10 ){ continue; }     //if和else 语句必须有{}符号
+        else { b= a*(a+b*(a+3));}
+
+        while(b<200)                //while循环
+        {
+            b=(a+b)*i;
+            if(i>50){break;}
+            if(i==99){return 1;}
+        }
+    }
+    return 0;
+}#
+*/

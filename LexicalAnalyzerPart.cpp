@@ -1,5 +1,10 @@
-#include <stdio.h>
-#include <string.h>
+/*********************************************************
+*
+*   file:LexicalAnalyzerPart.cpp
+*   description:implements the function define in LexicalAnalyzerPart.h
+*
+**********************************************************/
+
 #include "AnalyzerDefinations.h"
 
 #define _KEY_WORD_END "Ending"  //关键字的结束标识
@@ -10,8 +15,8 @@ extern int p_input;             //输入单词的缓冲区指针
 extern int currentLine;       //记录当前读取token所在的行号
 int p_token;               //单个单词缓冲区指针
 char ch;
-char* rwtab[]={"static" ," " ," "  ," " ," " ,
-                "void"  ," "," " ,"char"   ,"short",
+char* rwtab[]={"" ,"" ,""  ,"" ,"" ,
+                " "  ," "," " ," "   ,"short",
                 "int"   ,"long"  ," "   ,"for"    ,"continue" ,
                 " "," "  ," "  ," "     ,"while"  ,
                 "break" ,"if"    ,"else"     ,"return" ,_KEY_WORD_END};//能识别的关键字
@@ -180,9 +185,6 @@ WORD* scaner(){
     }
 
 }
-
-
-
 
 /* 从缓冲区读取一个字符 */
 char m_getch(){
